@@ -1,38 +1,248 @@
-.App {
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #111; /* Dark background */
+  color: #f4f4f4; /* Light text */
+}
+
+h1, h2, h3 {
+  margin: 0 0 20px;
+  font-weight: 700;
+}
+
+p {
+  margin: 0 0 20px;
+  line-height: 1.6;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+a {
+  color: #ffd700; /* Bright yellow */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.1); /* Light background with opacity */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow with opacity */
+  margin-bottom: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+  background-color: #333;
+  padding: 20px;
+  color: #f4f4f4;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav {
+  text-align: center;
+  margin-top: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav a {
+  color: #ffd700; /* Yellow navigation links */
+  margin: 0 15px;
+  font-size: 16px;
+  font-weight: 500;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Hero Section Styles */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #ffd700, #f39c12); /* Yellow gradient */
+  color: #111; /* Dark text for contrast */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Skills Section Styles */
+.skills {
+  text-align: center;
+}
+
+.skills ul {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.skills li {
+  background-color: rgba(255, 215, 0, 0.8); /* Yellow with opacity */
+  color: #111; /* Dark text for contrast */
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.skills li:hover {
+  background-color: #f39c12; /* Darker yellow on hover */
+}
+
+/* Experience Section Styles */
+.experience div {
+  margin-bottom: 20px;
+}
+
+.experience h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #ffd700; /* Yellow headings */
+}
+
+.experience p {
+  font-size: 16px;
+  color: #ccc; /* Light gray text */
+}
+
+/* Projects Section Styles */
+.projects {
+  text-align: center;
+}
+
+.project {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1); /* Light background with opacity */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.project h3 {
+  font-size: 22px;
+  color: #ffd700; /* Yellow headings */
+}
+
+.project p {
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.project a {
+  display: inline-block;
+  background-color: #ffd700; /* Yellow button */
+  color: #111;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.project a:hover {
+  background-color: #f39c12; /* Darker yellow on hover */
+}
+
+/* Contact Section Styles */
+.contact {
+  text-align: center;
+  background-color: #333; /* Dark background */
+  color: #f4f4f4;
+  padding: 40px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.contact h2 {
+  color: #ffd700; /* Yellow heading */
+  margin-bottom: 20px;
+}
+
+.contact p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.contact a {
+  color: #ffd700;
+  font-weight: bold;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero h1 {
+      font-size: 36px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .skills ul {
+      flex-direction: column;
   }
+
+  .skills li {
+      margin: 10px 0;
+  }
+
+  .project {
+      margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+      font-size: 28px;
+  }
+
+  .skills li {
+      padding: 8px 16px;
+  }
+
+  .project h3 {
+      font-size: 20px;
+  }
+}
+
+/* Color Palette and Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --primary-color: #ffd700; /* Yellow */
+  --secondary-color: #333; /* Dark gray */
+  --background-color: #111; /* Almost black */
+  --text-color: #f4f4f4; /* Light text */
+  --light-text-color: #ccc; /* Lighter gray */
+  --white-color: #fff;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
 }
